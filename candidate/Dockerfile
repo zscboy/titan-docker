@@ -17,7 +17,7 @@ FROM alpine:3.17.0
 
 WORKDIR /candidate
 COPY --from=0 /candidate/titan-candidate ./titan-candidate
-COPY ../../start.sh .
+COPY .start.sh .
 
 # host address and port the edge api will listen on
 EXPOSE 2345
