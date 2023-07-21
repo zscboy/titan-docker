@@ -8,9 +8,11 @@ git clone https://github.com/Filecoin-Titan/titan.git
 
 cd titan
 
-docker build -t candidate:latest -f ./cmd/titan-candidate/Dockerfile .
+不用代理:
+docker build -t candidate:latest -f ./Dockerfile .
 
-docker build --build-arg HTTP_PROXY=http://192.168.0.132:1081 --build-arg HTTPS_PROXY=http://192.168.0.132:1081 -t candidate:latest -f ./cmd/titan-candidate/Dockerfile .
+使用代理
+docker build --build-arg HTTP_PROXY=http://192.168.0.132:1081 --build-arg HTTPS_PROXY=http://192.168.0.132:1081 -t candidate:latest -f ./Dockerfile .
 ```
 
 

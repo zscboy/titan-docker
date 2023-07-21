@@ -15,7 +15,7 @@ RUN go build -o titan-candidate ./cmd/titan-candidate
 
 FROM alpine:3.17.0
 
-WORKDIR /edge
+WORKDIR /candidate
 COPY --from=0 /candidate/titan-candidate ./titan-candidate
 COPY ../../start.sh .
 
