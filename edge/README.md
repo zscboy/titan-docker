@@ -2,9 +2,16 @@
 
 ### first method
 ```shell
-cd ../../
+
+git clone https://github.com/zscboy/titan.git
+或者
+git clone https://github.com/Filecoin-Titan/titan.git
+
+cd titan
 
 docker build -t edge:latest -f ./cmd/titan-edge/Dockerfile .
+
+docker build --build-arg HTTP_PROXY=http://192.168.0.132:1081 --build-arg HTTPS_PROXY=http://192.168.0.132:1081 -t edge:latest -f ./cmd/titan-edge/Dockerfile .
 ```
 
 
